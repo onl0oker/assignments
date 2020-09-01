@@ -1,0 +1,19 @@
+-- Using NEWID() function generates a unique identifier as well.
+
+INSERT dbo.Library_Tbl VALUES 
+(CONVERT(uniqueidentifier, '2B900A74-C4D1-4837-A9A4-9C828752716C'), ‘Adorable Dogs’, ‘Learn about all types of adorable dogs.’, 
+	‘Donna Ryan’, ‘Animals’, CONVERT(datetime, '08/01/2015', 0),
+(CONVERT(uniqueidentifier, '3B600A73-D4D1-4137-A9A4-4D121752716D'), ‘Fancy Cars’, ‘Learn about the most beautiful and powerful cars in the world.’, 
+	‘David Lambs’, ‘Automobiles’, CONVERT(datetime, '05/02/2019', 0);
+
+INSERT dbo.Members_Tbl VALUES
+(CONVERT(uniqueidentifier, '4B900A74-E2D9-4837-B9A4-9E828752716E'), ‘testuser001’,  ‘John’,  ‘Jackson’, ’R.’, ‘12345 Street’, ‘Alexandria’, ‘VA’, 0),
+(CONVERT(uniqueidentifier, 'AEDC617C-D035-4213-B55A-DAE5CDFCA366'), ‘testuser002’, ‘Amanda’, ‘Thomas’, ‘N.’, ‘ABCD Street’, ‘Alexandria’, ‘VA’, 0);
+
+INSERT dbo.BooksRecord_Tbl VALUES 
+(CONVERT(uniqueidentifier, '4B900A74-E2D9-4837-B9A4-9E828752716E'), CONVERT(uniqueidentifier, '2B900A74-C4D1-4837-A9A4-9C828752716C'), CONVERT(datetime, '08/27/2020'), 0), 
+(CONVERT(uniqueidentifier, 'AEDC617C-D035-4213-B55A-DAE5CDFCA366'), CONVERT(uniqueidentifier, '2B900A74-C4D1-4837-A9A4-9C828752716C'), CONVERT(datetime, '07/01/2020'), 0);
+
+INSERT dbo.BooksStatus_Tbl VALUES 
+(CONVERT(uniqueidentifier, '5B900A74-R5D1-4837-A9A4-9R525752716R'), CONVERT(uniqueidentifier, '2B900A74-C4D1-4837-A9A4-9C828752716C'), 1), 
+(CONVERT(uniqueidentifier, '6B600A73-Z4Z1-4137-A9A6-6D121752716Z'), CONVERT(uniqueidentifier, '3B600A73-D4D1-4137-A9A4-4D121752716D'), 0);
